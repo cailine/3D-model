@@ -1,2 +1,2 @@
-# IXD210_Finalvideo
+# 3D-model-finalassignment
 Last assignment for hope
