@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Virtual Dreamscape</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    
+  </head>
+  <body>
+
+    <a-scene>
+        <!--ASSETS-->
+        <a-assets>
+          <a-asset-item id="sky" src="_assets/STARRYNIGHT_v2.glb"></a-asset-item>
+          <a-asset-item id="model" src="_assets/DREAMSCAPE_v6.glb"></a-asset-item>
+          <a-asset-item id="water" src="_assets/WATERFLOOR.glb"></a-asset-item>
+
+		<!-- Sky is free sample sky from cgskies, buy one for commecial use -->
+		<!-- <img id="cgsky" src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/{{site.siteurl}}{{ site.baseurl }}/a-frame-assets/sky/CGSkies_0347_free.jpg" crossorigin="anonymous" /> -->
+        </a-assets>
+
+         <!--CAMERA-->
+         <a-camera>
+             <a-cursor></a-cursor>
+         </a-camera>
+
+        <!--SKY-->
+        <a-sky src="#sky"
+        position="0 2 0"
+        rotation="0 -90 9"
+        scale="1 1 1"
+        ></a-sky>
+
+        <!--WATER-->
+       <a-entity 
+       gltf-model="gltf:#water" 
+       position="0 0 0"
+       scale="1 1 1"
+       ></a-entity>
+
+        <!--MODEL-->
+        <a-entity
+         gltf-model="#model"
+         position="0 0 -5" 
+         scale="1 1 1"
+        ></a-entity>
+
+        <!--LIGHTING-->
+        <a-entity light="color: #4c7cc2; intensity: 0.4; type: ambient;"></a-entity>
+        <a-entity light="color: #fffab7; intensity: 1.5" position="0 1 -5" id="sun"></a-entity>
+        <!-- <a-ocean-plane material="normalMap: #water-normal; sphericalEnvMap: #cgsky;"></a-ocean-plane> -->
+
+        <!--ENVIRONMENT-->
+       
+
+    </a-scene>
+
+  </body>
+  </html>
